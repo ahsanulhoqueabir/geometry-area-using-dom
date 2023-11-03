@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="autumn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header section starts here  -->
+    <header>
+        <div class="navbar bg-blue-100 lg:px-6 shadow-xl py-4">
+            <div class="flex-1">
+             <div>
+                <p class="text-2xl font-bold">Interactive</p>
+                <p class="font-bold text-l">Geometry Genius</p>
+             </div>
+            </div>
+            <div class="flex-none">
+              <button class="btn text-l bg-blue-300 mx-5 px-5"> Blog </button>
+            </div>
+          </div>
+    </header>
+    <!-- main section starts here  -->
+    <main>
+        <section class="px-3 flex flex-col-reverse md:flex-row">
+            <div class="card-container mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-2 sm:w-[100%] md:w-[70%]">
+                
+                <!-- Trinagle Card  -->
+                <div class="card w-full bg-blue-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/triangle.png" alt="image not found" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Triangle</h2>
+                      <p>Area (A) = 0.5 x b x h</p>
+                      <div class="flex gap-2 w-[100%] md:w-[70%]  ">
+                        <input type="text" placeholder="b" class="input input-bordered input-xs w-[50%] max-w-xs" /> <span class="font-thin text-sm">cm</span>
+                        <input type="text" placeholder="h" class="input input-bordered input-xs w-[50%] max-w-xs" /> <span class="font-thin text-sm">cm</span>
+                      </div>
+                      <div class="card-actions w-full">
+                        <button id="tbtn" class="btn w-full btn-info  ">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Rectangle Card  -->
+                  <div class="card w-full bg-blue-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/rectangle.png" alt="image not found" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Rectangle</h2>
+                      <p>Area (A) = w x l</p>
+                      <div class="flex gap-2 w-[100%] md:w-[70%]">
+                        <input type="text" placeholder="w" class="input input-bordered input-xs w-[50%] max-w-xs" /> <span class="font-thin text-sm">cm</span>
+                        <input type="text" placeholder="l" class="input input-bordered input-xs w-[50%] max-w-xs" /> <span class="font-thin text-sm">cm</span>
+                      </div>
+                      <div class="card-actions w-full">
+                        <button class="btn w-full btn-info  ">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Parallelogram card  -->
+                  <div class="card w-full bg-blue-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/parallelogram.png" alt="image not found" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Parallelogram</h2>
+                      <p>Area (A) = b x h</p>
+                      <div class="flex gap-2 w-[100%] md:w-[70%]">
+                        <input type="text" placeholder="b" class="input input-bordered input-xs w-[50%] max-w-xs" /> <span class="font-thin text-sm">cm</span>
+                        <input type="text" placeholder="h" class="input input-bordered input-xs w-[50%] max-w-xs" /> <span class="font-thin text-sm">cm</span>
+                      </div>
+                      <div class="card-actions w-full">
+                        <button class="btn w-full btn-info  ">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Rhombus card  -->
+                  <div class="card w-full bg-blue-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/rhombus.png" alt="image not found" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Rhombus</h2>
+                      <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                      <div class="flex gap-2 w-[100%] md:w-[70%]">
+                        <input type="text" placeholder="d₁" class="input input-bordered input-xs w-[50%] max-w-xs" /> <span class="font-thin text-sm">cm</span>
+                        <input type="text" placeholder="d₂" class="input input-bordered input-xs w-[50%] max-w-xs" /> <span class="font-thin text-sm">cm</span>
+                      </div>
+                      <div class="card-actions w-full">
+                        <button class="btn w-full btn-info  ">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Pentagon card  -->
+                  <div class="card w-full bg-blue-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/pentagon.png" alt="image not found" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Pentagon</h2>
+                      <p>Area (A) = 0.5 x p x b</p>
+                      <div class="flex gap-2 w-[100%] md:w-[70%]">
+                        <input type="text" placeholder="p" class="input input-bordered input-xs w-[50%] max-w-xs" /> <span class="font-thin text-sm">cm</span>
+                        <input type="text" placeholder="b" class="input input-bordered input-xs w-[50%] max-w-xs" /> <span class="font-thin text-sm">cm</span>
+                      </div>
+                      <div class="card-actions w-full">
+                        <button class="btn w-full btn-info  ">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Ellipse card  -->
+                  <div class="card w-full bg-blue-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="./images/ellipse.png" alt="image not found" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Ellipse</h2>
+                      <p>Area (A) = πab</p>
+                      <div class="flex gap-2 w-[100%] md:w-[70%]">
+                        <input type="text" placeholder="a" class="input input-bordered input-xs w-[50%] max-w-xs" /> <span class="font-thin text-sm">cm</span>
+                        <input type="text" placeholder="b" class="input input-bordered input-xs w-[50%] max-w-xs" /> <span class="font-thin text-sm">cm</span>
+                      </div>
+                      <div class="card-actions w-full">
+                        <button class="btn w-full btn-info  ">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+            <div class="Result-container md:w-[30%]  sm:w-[100%] mt-5">
+                <div>
+                    <h1 class="text-center font-bold text-xl underline underline-offset-8">Area Calculation</h1>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                              <th>NO</th>
+                              <th>Name</th>
+                              <th>Area(cm<sup>2</sup>)</th>
+                              <th>Button</th>
+                              <th>Area(m<sup>2</sup>)</th>
+                            </tr>
+                        </thead>
+                      <tbody id="tbody">
+                        <!-- data will we added here  -->
+                        
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
+        </section>
+    </main>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
