@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- header section starts here  -->
+    <nav>
+      <div class="navbar bg-blue-100 lg:px-6 shadow-xl py-4">
+        <div class="flex-1">
+          <a href="/">
+            <p class="text-2xl font-bold">Interactive</p>
+            <p class="font-bold text-l">Geometry Genius</p>
+          </a>
+        </div>
+        <div class="flex-none">
+          <a href="/">
+            <button class="btn hover:bg-blue-400 text-l bg-blue-300 mx-5 px-5">
+              Back to Home
+            </button>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <img
+        class="max-h-60 w-full object-cover"
+        src="/images/blog-banner.jpg"
+        alt=""
+      />
+    </header>
+    <!-- div.space-y-4>(h1.text-xl.font-bold)+(article.text-sm.text-justify.space-y-3) -->
+    <!-- main content added here  -->
+    <main class="lg:px-20 px-5 py-10 space-y-5">
+      <!-- question 1 -->
+      <div class="space-y-4">
+        <h1 class="text-xl font-bold">
+          What Is DOM And What Is The Purpose Of DOM?
+        </h1>
+        <article class="text-sm text-justify space-y-3">
+          <p>
+            The Document Object Model (DOM) is a programming interface for web
+            documents. It represents the page so that programs can change the
+            document structure, style, and content. The DOM represents the
+            document as nodes and objects. That way, programming languages can
+            connect to the page.
+          </p>
+          <p>
+            A web page is a document that can be either displayed in the browser
+            window or as the HTML source. In both cases, it is the same document
+            but the Document Object Model (DOM) representation allows it to be
+            manipulated. As an object-oriented representation of the web page,
+            it can be modified with a scripting language such as JavaScript.
+          </p>
+          <p>
+            The DOM represents a document with a logical tree. Each branch of
+            the tree ends in a node, and each node contains objects. DOM methods
+            allow programmatic access to the tree; with them you can change the
+            document's structure, style, or content. Nodes can also have event
+            handlers attached to them; once an event is triggered, the event
+            handlers get executed.
+          </p>
+        </article>
+      </div>
+      <!-- 2nd question  -->
+      <div class="space-y-4">
+        <h1 class="text-xl font-bold">
+          How Will You Select HTML Elements Using DOM? Name The DOM Methods.
+        </h1>
+        <article class="text-sm text-justify space-y-3">
+          <p>
+            The Document Object Model (DOM) is a programming interface for HTML
+            and XML documents. It represents the structure of the document as a
+            tree of objects, allowing you to manipulate its content and visual
+            presentation. Each object represents a part of the document, such as
+            an element or attribute.
+          </p>
+          <p>
+            <ol class="list-disc list-inside">
+           <li> Using getElementById</li>
+           <li> an element by its ID.</li>
+           <li> Using getElementsByClassName</li>
+           <li> Using getElementsByTagName: </li>
+           <li> Using querySelector</li>
+           <li> Using querySelectorAll</li>
+        </ol>
+          </p>
+        </article>
+      </div>
+        <!-- 3rd question  -->
+        <div class="space-y-4">
+            <h1 class="text-xl font-bold">What Is Event Bubble?</h1>
+            <article class="text-sm text-justify space-y-3">
+                <p>Event Bubbling is a concept in the DOM (Document Object Model). It happens when an element receives an event, and that event bubbles up (or you can say is transmitted or propagated) to its parent and ancestor elements in the DOM tree until it gets to the root element.</p>
+                <p>For example, if you have a <code>div</code> element and a <code>button</code> element inside the <code>div</code>, and you have a click event listener on both the <code>div</code> and the <code>button</code>, when you click the button, the event will bubble up from the button to the <code>div</code>.</p>
+                <p>Event bubbling is a mechanism that allows events to propagate upward from
+                    the element that was clicked on to its ancestors in the DOM tree.</p>
+
+            </article>
+        </div>
+        <!-- 4th question -->
+        <div class="space-y-4">
+            <h1 class="text-xl font-bold">What Is A Callback Function And Why Will You Use It?</h1>
+            <article class="text-sm text-justify space-y-3">
+                <p>A callback function is a function that is passed as an argument to another function, to be “called back” at a later time. A function that accepts other functions as arguments is called a higher-order function, which contains the logic for when the callback function gets executed. It is used to make sure that a function is not executed before a task is completed but after the task is completed, otherwise
+                    the function will not work properly.</p>
+                    <p>
+                        We need callback functions because many JavaScript actions are asynchronous, which means they don't really stop the program (or a function) from running until they're completed, as you're probably used to. Instead, it will execute in the background while the rest of the code runs.
+                    </p>
+            </article>
+        </div>
+    </main>
+  </body>
+</html>
